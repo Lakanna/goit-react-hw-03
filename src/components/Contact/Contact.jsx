@@ -1,14 +1,14 @@
 import css from './Contact.module.css'
 
-export default function Contact({ contact }) {
+export default function Contact({ contact:{name, number, id}, onDelete }) {
    
     return (
         <div className={css.contactBox}>
             <div>
-                <p>{ contact.name}</p>
-                <p>{ contact.number}</p>
+                <p>{name}</p>
+                <p>{number}</p>
             </div>
-            <button className={css.btnDelete}>Delete</button>
+            <button className={css.btnDelete} onClick={()=>onDelete(id)}>Delete</button>
         </div>
     )
 }
