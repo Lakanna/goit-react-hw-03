@@ -5,10 +5,24 @@
   gap: 5px;
   margin-bottom: 20px;
   border: 2px solid black;
-  padding: 8px;
+  padding: 12px;
   border-radius: 4px;
+  /* input: 100%; */
 }
 
+/* .inputField {
+  width: 100%;
+} */
 .errorText {
   color: red;
+}
+
+.formaBtn {
+  margin: 7px auto;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: rgb(195, 194, 191);
+  cursor: pointer;
 }
