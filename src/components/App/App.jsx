@@ -23,8 +23,6 @@ function App() {
 
   function addContact(newContact) {
     setContactList((prevStat) => {
-      console.log(prevStat);
-      console.log(newContact);
       return [...prevStat, newContact];
     });
   }
