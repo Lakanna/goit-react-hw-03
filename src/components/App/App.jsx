@@ -20,6 +20,10 @@ function App() {
   ]      
   )
 
+  const [filterName, setFilterName] = useState('')
+  
+  const valueByFilter = contactList.filter((contact)=>contact.name.toLowerCase().includes(filterName.toLowerCase()))
+
   function addContact(newContact) {
     setContactList((prevStat) => {
       console.log(prevStat);
@@ -38,8 +42,8 @@ function App() {
 return (<div>
           <h1 className={css.title}>Phonebook</h1>
           <ContactForm onAddContact={addContact}/>
-          <SearchBox /> 
-          <ContactList contactList={contactList} onDelete={deleteContact} />
+          <SearchBox value={ filterName} onFilter={setFilterName} /> 
+          <ContactList contactList={valueByFilter} onDelete={deleteContact} />
         </div>)
  
 }
