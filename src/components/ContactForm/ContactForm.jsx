@@ -34,16 +34,21 @@ export default function ContactForm({ onAddContact }) {
     >
       <Form className={css.formAddContact}>
         <label htmlFor={fieldNameId}>Name</label>
-        <Field type="text" name="name" id={fieldNameId}></Field>
+        <Field
+          type="text"
+          name="name"
+          id={fieldNameId}
+          autocomplete="off"
+        ></Field>
         <ErrorMessage className={css.errorText} name="name" component="p" />
 
         <label htmlFor={fieldNumberId}>Number</label>
         <Field
-          type=""
+          type="text"
           name="number"
           id={fieldNumberId}
           placeholder="XXX-XX-XX"
-          autocomplit="off"
+          autocomplete="off"
         ></Field>
         <ErrorMessage className={css.errorText} name="number" component="p" />
 
